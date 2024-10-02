@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff6600;
+}
+
+.slogan {
+    margin-top: 5%;
+}
+
+.slogan h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.slogan p {
+    font-size: 1.2em;
+}
+
+.fas {
+    font-size: 2.5rem !important;
+    margin-bottom: 10%;
+}
+
+.brands img {
+    width: 100px;
+    height: auto;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #cc5200;
+}
+
+main {
+    padding: 20px;
+}
+
+.services,
+.products,
+.latest-offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.service,
+.product,
+.offer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 21%;
+    /* Adjusted to ensure four items in a row */
+    max-width: 21%;
+}
+
+.service i,
+.product img,
+.offer img {
+    width: 80px;
+    /* Adjusted to match the image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product img {
+    display: block;
+    margin: 0 auto 10px;
+    /* Center the image and add bottom margin */
+}
+
+.product-button {
+    margin-top: 10px;
+    /* Add top margin to separate the button from the image */
+}
+
+.service h3,
+.product h3,
+.offer p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.service p,
+.product p {
+    font-size: 0.9em;
+    color: #666;
+    /* Adjusted to match the image */
+}
+
+.latest-offers h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
