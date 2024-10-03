@@ -18,24 +18,49 @@
   </head>
   <body>
     <header class="bg-dark text-white py-4">
-      <div class="container d-flex justify-content-between align-items-center">
+      <div
+        class="row-header container d-flex justify-content-between align-items-center"
+      >
         <div class="logo">
           <h1>IMP EXPO26</h1>
         </div>
+        <!-- Hamburger Menu Button for Tablet and Mobile -->
+        <button
+          class="btn-hamb navbar-toggler d-lg-none ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
         <nav class="navbar navbar-expand-lg navbar-dark">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">How to Buy</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          </ul>
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="navbarItems">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How to Buy</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /.collapse.navbar-collapse -->
         </nav>
       </div>
+      <!-- /.container -->
     </header>
+
     <div class="slogan text-center">
       <h2>THE BEST PRICES IN MIAMI.</h2>
       <p>GET TO KNOW THE BRANDS WE SELL</p>
@@ -213,5 +238,15 @@
         <p>© 2021 mycompany</p>
       </div>
     </footer>
+    <script>
+      function toggleMenu() {
+        const navbarItems = document.getElementById("navbarItems");
+        navbarItems.classList.toggle("toggled");
+      }
+    </script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
