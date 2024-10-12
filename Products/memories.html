@@ -95,5 +95,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+  window.addEventListener('load', function() {
+    let links = document.querySelectorAll('a');
+
+    links.forEach(link => {
+      try {
+        let url = new URL(link.href);
+
+        // Console log the original and modified URLs
+        console.log(`Original URL: ${link.href}, Modified URL: ${url.pathname.slice(1) + url.search + url.hash}`);
+
+        // Remove leading slash to make the link relative
+        if (url.pathname.startsWith('/')) {
+          link.href = url.pathname.slice(1) + url.search + url.hash;
+        }
+      } catch (e) {
+        console.error("Invalid URL: ", link.href);
+      }
+    });
+  });
+</script>
   </body>
 </html>
