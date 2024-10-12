@@ -261,15 +261,17 @@
 <script>
   window.addEventListener('load', function() {
     let links = document.querySelectorAll('a');
-    let basePath = window.location.origin + '/impo_expo';
 
     links.forEach(link => {
       try {
         let url = new URL(link.href);
 
-        // Only adjust if the link is absolute and matches the base path
-        if (url.origin + url.pathname.startsWith(basePath)) {
-          link.href = url.pathname.replace('/impo_expo', '') + url.search + url.hash;
+        // Console log the original and modified URLs
+        console.log(`Original URL: ${link.href}, Modified URL: ${url.pathname.slice(1) + url.search + url.hash}`);
+
+        // Remove leading slash to make the link relative
+        if (url.pathname.startsWith('/')) {
+          link.href = url.pathname.slice(1) + url.search + url.hash;
         }
       } catch (e) {
         console.error("Invalid URL: ", link.href);
