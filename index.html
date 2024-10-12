@@ -263,6 +263,7 @@
     let links = document.querySelectorAll('a');
     links.forEach(link => {
       let url = new URL(link.href);
+      console.log(`Original URL: ${link.href}, New URL: ${url.pathname + url.search + url.hash}`);
       link.href = url.pathname + url.search + url.hash;
     });
   });
