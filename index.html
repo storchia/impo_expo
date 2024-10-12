@@ -261,20 +261,22 @@
 <script>
   window.addEventListener('load', function() {
     let links = document.querySelectorAll('a');
+    let basePath = window.location.origin + '/impo_expo';
+
     links.forEach(link => {
       try {
         let url = new URL(link.href);
-        let basePath = window.location.origin; // Capture base path
 
         // Only adjust if the link is absolute and matches the base path
-        if (url.origin === basePath) {
-          link.href = url.pathname + url.search + url.hash;
+        if (url.origin + url.pathname.startsWith(basePath)) {
+          link.href = url.pathname.replace('/impo_expo', '') + url.search + url.hash;
         }
       } catch (e) {
         console.error("Invalid URL: ", link.href);
       }
     });
   });
+</script>
 
   </body>
 </html>
