@@ -1,4 +1,5 @@
 /* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -94,6 +95,10 @@ main {
     padding: 20px;
 }
 
+h3.mb-prod {
+    margin-bottom: 18%!important;
+}
+
 .services,
 .products,
 .latest-offers {
@@ -120,7 +125,7 @@ main {
 .service i,
 .product img,
 .offer img {
-    width: 80px;
+    width: 75%;
     /* Adjusted to match the image */
     height: auto;
     margin-bottom: 10px;
@@ -193,6 +198,14 @@ footer {
 
 footer p {
     margin: 10px 0;
+}
+
+a.text-reset.a-logo {
+    text-decoration: none !important;
+}
+
+.img-prod-page {
+    width: 100%;
 }
 
 @media (max-width: 992px) {

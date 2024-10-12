@@ -22,7 +22,7 @@
         class="row-header container d-flex justify-content-between align-items-center"
       >
         <div class="logo">
-          <h1>IMP EXPO26</h1>
+          <h1><a class="text-reset a-logo" href="/">IMP EXPO26</a></h1>
         </div>
         <!-- Hamburger Menu Button for Tablet and Mobile -->
         <button
@@ -41,18 +41,14 @@
           <!-- Collapsible content -->
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0" id="navbarItems">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+  
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="/#products">Products</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">How to Buy</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+       
+              <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
             </ul>
           </div>
           <!-- /.collapse.navbar-collapse -->
@@ -64,16 +60,16 @@
     <div class="slogan text-center">
       <h2>THE BEST PRICES IN MIAMI.</h2>
       <p>GET TO KNOW THE BRANDS WE SELL</p>
-      <div class="brands d-flex justify-content-center">
+      <!-- <div class="brands d-flex justify-content-center">
         <img src="images/logo.png" alt="FUJIFILM" class="mx-2" />
         <img src="images/logo.png" alt="Google" class="mx-2" />
         <img src="images/logo.png" alt="GoPro" class="mx-2" />
         <img src="images/logo.png" alt="harman/kardon" class="mx-2" />
       </div>
       <button class="btn btn-warning mt-3">SHOP NOW</button>
-    </div>
-    <main class="container my-5">
-      <section class="services row text-center my-5">
+    </div> -->
+    <main class="container mb-5">
+      <section class="services row text-center mb-5">
         <div class="service col-md-3 mb-4">
           <i class="fas fa-handshake"></i>
           <h3>WE OFFER MORE THAN MACHINES</h3>
@@ -107,55 +103,69 @@
           </p>
         </div>
       </section>
-      <section class="products row">
+      <section id="products" class="products row">
         <div class="product col-md-3 text-center mb-4">
-          <h3>APPLE PRODUCTS</h3>
-          <img src="images/art.png" alt="Apple Products" class="mb-2" />
+          <h3 class="mb-prod">APPLE PRODUCTS</h3>
+          <img src="images/productos_apple-768x384.jpg" alt="Apple Products" class="mb-2" />
           <div class="product-button">
-            <button class="btn btn-warning">Show More</button>
+            <a href="/Products/apple.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
           </div>
         </div>
         <div class="product col-md-3 text-center mb-4">
           <h3>CELLPHONES AND TABLET</h3>
-          <img src="images/art.png" alt="Cellphones and Tablet" class="mb-2" />
+          <img src="images/celus_y_tablets-300x154.jpg" alt="Cellphones and Tablet" class="mb-2" />
           <div class="product-button">
-            <button class="btn btn-warning">Show More</button>
+            <a href="/Products/cellphone.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
           </div>
         </div>
         <div class="product col-md-3 text-center mb-4">
-          <h3>DRONES</h3>
-          <img src="images/art.png" alt="Drones" class="mb-2" />
+          <h3 class="mb-prod">DRONES</h3>
+          <img src="images/drone-300x154.jpg" alt="Drones" class="mb-2" />
           <div class="product-button">
-            <button class="btn btn-warning">Show More</button>
+                <a href="/Products/drones.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
           </div>
         </div>
         <div class="product col-md-3 text-center mb-4">
           <h3>VIDEO GAMES CONSOLE</h3>
-          <img src="images/art.png" alt="Video Games Console" class="mb-2" />
+          <img src="images/consolas-300x169.jpg" alt="Video Games Console" class="mb-2" />
           <div class="product-button">
-            <button class="btn btn-warning">Show More</button>
+                <a href="/Products/videogames.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
           </div>
         </div>
         <div class="product col-md-3 text-center mb-4">
           <h3>COMPUTERS AND NOTEBOOKS</h3>
           <img
-            src="images/art.png"
+            src="images/compus-2.jpg"
             alt="Computers and Notebooks"
             class="mb-2"
           />
           <div class="product-button">
-            <button class="btn btn-warning">Show More</button>
+                <a href="/Products/computers.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
           </div>
         </div>
         <div class="product col-md-3 text-center mb-4">
-          <h3>DIGITAL CAMERAS</h3>
-          <img src="images/art.png" alt="Digital Cameras" class="mb-2" />
-          <button class="btn btn-warning">Show More</button>
+          <h3 class="mb-prod">DIGITAL CAMERAS</h3>
+          <img src="images/camaras-1-300x141.jpg" alt="Digital Cameras" class="mb-2" />
+              <a href="/Products/cameras.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
         </div>
         <div class="product col-md-3 text-center mb-4">
           <h3>MEMORIES AND PENDRIVES</h3>
-          <img src="images/art.png" alt="Memories and Pendrives" class="mb-2" />
-          <button class="btn btn-warning">Show More</button>
+          <img src="images/pendrives-4n.jpg" alt="Memories and Pendrives" class="mb-2" />
+              <a href="/Products/memories.html">
+              <button class="btn btn-warning">Show More</button>
+            </a>
         </div>
       </section>
       <section class="latest-offers text-center my-5">
@@ -163,63 +173,63 @@
         <div class="row">
           <div class="offer col-md-2 text-center mb-4">
             <img
-              src="images/random.png"
+              src="images/amazon-fire-tv-stick-768x768.jpg"
               alt="Amazon Fire TV Stick"
               class="mb-2"
             />
             <p>Amazon Fire TV Stick</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="Chromecast" class="mb-2" />
+            <img src="images/101017092_581179852517088_6495151426058867231_n-768x768.jpg" alt="Chromecast" class="mb-2" />
             <p>Chromecast</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="Amazon Echo Dot" class="mb-2" />
+            <img src="images/117394428_117360996535712_6456046578499234863_n-768x768.jpg" alt="Amazon Echo Dot" class="mb-2" />
             <p>Amazon Echo Dot</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="Band 5" class="mb-2" />
+            <img src="images/amazfit-band-5-768x768.jpg" alt="Band 5" class="mb-2" />
             <p>Band 5</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
             <img
-              src="images/random.png"
+              src="images/g604-768x768.jpg"
               alt="Logitech G Controller"
               class="mb-2"
             />
             <p>Logitech G Controller</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="HomePod Mini" class="mb-2" />
+            <img src="images/homepod-mini-768x768.jpg" alt="HomePod Mini" class="mb-2" />
             <p>HomePod Mini</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
             <img
-              src="images/random.png"
+              src="images/samsung-earbuds-pro-768x768.jpg"
               alt="Samsung Galaxy Buds Pro"
               class="mb-2"
             />
             <p>Samsung Galaxy Buds Pro</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="XTREME Speaker" class="mb-2" />
+            <img src="images/xtreme-2-768x768.jpg" alt="XTREME Speaker" class="mb-2" />
             <p>XTREME Speaker</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="iPhone 12 Pro Max" class="mb-2" />
+            <img src="images/iphone-12-pro-max-768x768.jpg" alt="iPhone 12 Pro Max" class="mb-2" />
             <p>iPhone 12 Pro Max</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="Oculus Rift S" class="mb-2" />
+            <img src="images/oculus-rift-s-768x768.jpg" alt="Oculus Rift S" class="mb-2" />
             <p>Oculus Rift S</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
-            <img src="images/random.png" alt="Roku Ultra LT" class="mb-2" />
+            <img src="images/roku-ultra-lt-768x768.jpg" alt="Roku Ultra LT" class="mb-2" />
             <p>Roku Ultra LT</p>
           </div>
           <div class="offer col-md-2 text-center mb-4">
             <img
-              src="images/random.png"
+              src="images/117350891_2123258454465631_1345012255564205425_n-768x768.jpg"
               alt="PlayStation DualShock 4"
               class="mb-2"
             />
