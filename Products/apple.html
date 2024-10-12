@@ -99,7 +99,7 @@
 <script>
   window.addEventListener('load', function() {
     let links = document.querySelectorAll('a');
-    let basePath = '/impo_expo/';  // Adjust the base path as needed
+    let basePath = '/impo_expo';  // Set your base path
 
     links.forEach(link => {
       try {
@@ -107,17 +107,23 @@
 
         // Check if the link is internal
         if (url.origin === window.location.origin) {
+          // Make the link relative to the base path
           let relativePath = url.pathname;
-
-          // Remove the base path to make it relative
-          if (relativePath.startsWith(basePath)) {
-            relativePath = relativePath.slice(basePath.length);
+          
+          // Adjust links to ensure the base path is correctly prefixed
+          if (!relativePath.startsWith(basePath)) {
+            relativePath = basePath + relativePath;
+          }
+          
+          // If URL has hash, ensure base path points correctly
+          if (url.hash) {
+            link.href = basePath + url.hash;
+          } else {
+            link.href = relativePath + url.search + url.hash;
           }
 
+          // Log the links for debugging
           console.log(`Original URL: ${link.href}, Modified URL: ${relativePath + url.search + url.hash}`);
-
-          // Apply the relative path
-          link.href = relativePath + url.search + url.hash;
         }
       } catch (e) {
         console.error("Invalid URL: ", link.href);
