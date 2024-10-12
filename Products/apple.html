@@ -105,15 +105,12 @@
       try {
         let url = new URL(link.href);
 
-        // Check if the link is internal
-        if (link.href.startsWith(window.location.origin + basePath)) {
-          // Remove the base path to make it relative
-          let relativePath = link.href.replace(window.location.origin + basePath, '');
-          if (relativePath.startsWith('/')) {
-            relativePath = relativePath.slice(1);
-          }
-          console.log(`Original URL: ${link.href}, Modified URL: ${relativePath + url.search + url.hash}`);
-          link.href = relativePath + url.search + url.hash;
+        // Check if the link is internal and not already relative
+        if (url.origin === window.location.origin && !link.href.startsWith(basePath) && !link.href.startsWith('#')) {
+          // Make the link relative to the current page
+          let relativePath = url.pathname.slice(basePath.length) + url.search + url.hash;
+          console.log(`Original URL: ${link.href}, Modified URL: ${relativePath}`);
+          link.href = relativePath;
         }
       } catch (e) {
         console.error("Invalid URL: ", link.href);
