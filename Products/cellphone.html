@@ -96,6 +96,40 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    let links = document.querySelectorAll('a');
+    let basePath = '/impo_expo';  // Set your base path
 
+    links.forEach(link => {
+      try {
+        let url = new URL(link.href);
+
+        // Check if the link is internal
+        if (url.origin === window.location.origin) {
+          // Make the link relative to the base path
+          let relativePath = url.pathname;
+          
+          // Adjust links to ensure the base path is correctly prefixed
+          if (!relativePath.startsWith(basePath)) {
+            relativePath = basePath + relativePath;
+          }
+          
+          // If URL has hash, ensure base path points correctly
+          if (url.hash) {
+            link.href = basePath + url.hash;
+          } else {
+            link.href = relativePath + url.search + url.hash;
+          }
+
+          // Log the links for debugging
+          console.log(`Original URL: ${link.href}, Modified URL: ${relativePath + url.search + url.hash}`);
+        }
+      } catch (e) {
+        console.error("Invalid URL: ", link.href);
+      }
+    });
+  });
+</script>
   </body>
 </html>
