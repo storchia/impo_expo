@@ -99,13 +99,16 @@
 <script>
   window.addEventListener('load', function() {
     let links = document.querySelectorAll('a');
+    let basePath = '/impo_expo/';  // Adjust the base path as needed
+
     links.forEach(link => {
       try {
         let url = new URL(link.href);
-        // Adjust the logic to only modify internal links
-        if (link.href.startsWith(window.location.origin)) {
-          let relativePath = url.pathname;
-          // Ensure we remove any leading slashes or redundant base paths
+
+        // Check if the link is internal
+        if (link.href.startsWith(window.location.origin + basePath)) {
+          // Remove the base path to make it relative
+          let relativePath = link.href.replace(window.location.origin + basePath, '');
           if (relativePath.startsWith('/')) {
             relativePath = relativePath.slice(1);
           }
